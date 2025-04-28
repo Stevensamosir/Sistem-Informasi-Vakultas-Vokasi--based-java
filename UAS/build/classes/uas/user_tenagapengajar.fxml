@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="848.0" prefWidth="1306.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uas.user_tenagapengajarController">
+    <children>
+        <AnchorPane fx:id="content_area" minHeight="0.0" minWidth="0.0" prefHeight="721.0" prefWidth="1229.0">
+            <children>
+                <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="726.0" prefWidth="1229.0" style="-fx-background-color: #F5F5F5;">
+                    <top>
+                        <AnchorPane prefHeight="50.0" prefWidth="1080.0" style="-fx-background-color: #2C3E50;">
+                            <children>
+                                <Label layoutX="14.0" layoutY="12.0" text="Fakultas Vokasi IT Del" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="1030.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@FOTO/account_icon.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </AnchorPane>
+                    </top>
+                    <left>
+                        <AnchorPane prefHeight="529.0" prefWidth="216.0" style="-fx-background-color: #34495E;">
+                            <children>
+                                <Button fx:id="btn_dashboard" layoutX="18.0" layoutY="28.0" mnemonicParsing="false" onAction="#switchToDashboard" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #3498DB;" text="Beranda" textFill="WHITE">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="btn_d4trpl" layoutX="18.0" layoutY="84.0" mnemonicParsing="false" onAction="#switchToD4TRPL" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #2980B9;" text="D4 Teknologi Rekayasa Perangkat Lunak" textFill="WHITE" textOverrun="CLIP">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="btn_d3ti" layoutX="18.0" layoutY="140.0" mnemonicParsing="false" onAction="#switchToD3TI" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #2980B9;" text="D3 Teknologi Informasi" textFill="WHITE">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="btn_d3tk" layoutX="18.0" layoutY="193.0" mnemonicParsing="false" onAction="#switchToD3TK" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #2980B9;" text="D3 Teknologi Komputer" textFill="WHITE">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="btn_news" layoutX="18.0" layoutY="244.0" mnemonicParsing="false" onAction="#switchToNews" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #2980B9;" text="Berita" textFill="WHITE">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="btn_teachers" layoutX="18.0" layoutY="352.0" mnemonicParsing="false" onAction="#switchToTeachers" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #2980B9;" text="Tenaga Pengajar" textFill="WHITE">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="btn_profile" layoutX="18.0" layoutY="405.0" mnemonicParsing="false" onAction="#switchToProfile" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #E74C3C;" text="Kembali" textFill="WHITE">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Button>
+                        <Button fx:id="btn_news1" layoutX="18.0" layoutY="298.0" mnemonicParsing="false" onAction="#switchToNews1" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #2980B9;" text="Galeri" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                            </children>
+                        </AnchorPane>
+                    </left>
+                    <center>
+                        <TableView fx:id="employeeTable" prefHeight="658.0" prefWidth="780.0" BorderPane.alignment="CENTER">
+                            <columns>
+                                <TableColumn fx:id="idColumn" prefWidth="31.0" text="ID" />
+                                <TableColumn fx:id="employeeIdColumn" prefWidth="103.0" text="Employee ID" />
+                                <TableColumn fx:id="firstNameColumn" prefWidth="106.0" text="First Name" />
+                                <TableColumn fx:id="lastNameColumn" prefWidth="111.0" text="Last Name" />
+                                <TableColumn fx:id="genderColumn" prefWidth="67.0" text="Gender" />
+                                <TableColumn fx:id="phoneNumberColumn" prefWidth="137.0" text="Phone Number" />
+                                <TableColumn fx:id="positionColumn" prefWidth="100.0" text="Position" />
+                                <TableColumn fx:id="dateColumn" prefWidth="96.0" text="Date" />
+                                <TableColumn fx:id="photoColumn" prefWidth="261.0" text="Photo" />
+                            </columns>
+                        </TableView>
+                    </center>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

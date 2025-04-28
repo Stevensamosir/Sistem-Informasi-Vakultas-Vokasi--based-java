@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="817.0" prefWidth="910.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uas.loginregister_Controller">
+    <children>
+        <StackPane layoutX="10.0" layoutY="10.0" prefHeight="809.0" prefWidth="901.0">
+            <children>
+                <AnchorPane fx:id="main_form" prefHeight="817.0" prefWidth="910.0">
+                    <children>
+                        <!-- Login Form -->
+                        <AnchorPane fx:id="login_form" layoutX="0.0" layoutY="0.0" prefHeight="799.0" prefWidth="895.0">
+                            <children>
+                                <AnchorPane layoutX="257.0" layoutY="158.0" prefHeight="441.0" prefWidth="292.0" styleClass="right-form" stylesheets="@loginDesign.css">
+                                    <children>
+                                        <Label layoutX="14.0" layoutY="173.0" text="Selamat Datang Kembali" textFill="#0078c4">
+                                            <font>
+                                                <Font name="Tahoma Bold" size="17.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="username" layoutX="13.0" layoutY="204.0" onAction="#loginAccount" prefHeight="33.0" prefWidth="384.0" promptText="Nama Pengguna" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                        <PasswordField fx:id="password" layoutX="13.0" layoutY="250.0" onAction="#loginAccount" prefHeight="33.0" prefWidth="384.0" promptText="Masukkan Kata Sandi" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                        <Button fx:id="loginBtn" layoutX="114.0" layoutY="304.0" mnemonicParsing="false" onAction="#loginAccount" prefHeight="33.0" prefWidth="183.0" styleClass="login-btn" stylesheets="@loginDesign.css" text="Masuk" />
+                                        <ImageView fitHeight="159.0" fitWidth="146.0" layoutX="126.0" layoutY="-59.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@FOTO/Del_Institute_of_Technology_Logo.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </AnchorPane>
+                                <Button fx:id="closeLoginBtn" layoutX="831.0" layoutY="7.0" mnemonicParsing="false" onAction="#close" prefHeight="24.0" prefWidth="58.0" styleClass="close" stylesheets="@loginDesign.css">
+                                    <graphic>
+                                        <FontAwesomeIcon glyphName="CLOSE" size="1.2em" />
+                                    </graphic>
+                                </Button>
+                                <Label fx:id="registerLabel" layoutX="349.0" layoutY="782.0" onMouseClicked="#showRegisterForm" style="-fx-cursor: hand; -fx-text-fill: blue;" text="Tidak Punya Akun? Daftar" />
+                            </children>
+                        </AnchorPane>
+
+                        <!-- Register Form -->
+                        <AnchorPane fx:id="register_form" layoutX="0.0" layoutY="0.0" prefHeight="809.0" prefWidth="895.0" visible="false">
+                            <children>
+                                <AnchorPane layoutX="-7.0" layoutY="-11.0" prefHeight="803.0" prefWidth="879.0" styleClass="right-form" stylesheets="@loginDesign.css">
+                                    <children>
+                                        <Label layoutX="611.0" layoutY="123.0" text="DAFTAR" textFill="#0078C4">
+                                            <font>
+                                                <Font name="Tahoma Bold" size="33.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="541.0" layoutY="203.0" text="FULL NAME" textFill="#7e8386">
+                                            <font>
+                                                <Font name="Tahoma Bold" size="13.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="registerUsername" layoutX="541.0" layoutY="226.0" prefHeight="52.0" prefWidth="302.0" promptText="Employee ID" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                        <TextField fx:id="registerPhone" layoutX="541.0" layoutY="318.0" prefHeight="52.0" prefWidth="302.0" promptText="Nomor Telp" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                        <PasswordField fx:id="registerPassword" layoutX="541.0" layoutY="413.0" prefHeight="52.0" prefWidth="302.0" promptText="Sandi" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                        <PasswordField fx:id="registerPassword1" layoutX="538.0" layoutY="501.0" prefHeight="52.0" prefWidth="302.0" promptText="Masukkan kembali sandi" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                        <Button fx:id="registerBtn" layoutX="582.0" layoutY="590.0" mnemonicParsing="false" onAction="#registerAccount" prefHeight="40.0" prefWidth="220.0" styleClass="login-btn" stylesheets="@loginDesign.css" text="Register" />
+                                        <Label fx:id="loginLabel" layoutX="584.0" layoutY="676.0" onMouseClicked="#showLoginForm" style="-fx-cursor: hand; -fx-text-fill: blue;" text="Already have an account? Login" />
+                                        <Button fx:id="closeRegisterBtn" layoutX="849.0" layoutY="-1.0" mnemonicParsing="false" onAction="#close" prefHeight="24.0" prefWidth="58.0" styleClass="close" stylesheets="@loginDesign.css">
+                                            <graphic>
+                                                <FontAwesomeIcon glyphName="CLOSE" size="1.2em" />
+                                            </graphic>
+                                        </Button>
+                                        <Label layoutX="541.0" layoutY="298.0" text="NOMOR TELEPON" textFill="#7e8386">
+                                            <font>
+                                                <Font name="Tahoma Bold" size="13.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="541.0" layoutY="389.0" text="KATA SANDI" textFill="#7e8386">
+                                            <font>
+                                                <Font name="Tahoma Bold" size="13.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="538.0" layoutY="473.0" text="MASUKKAN KEMBALI KATA SANDI" textFill="#7e8386">
+                                            <font>
+                                                <Font name="Tahoma Bold" size="13.0" />
+                                            </font>
+                                        </Label>
+                                        <ImageView fitHeight="814.0" fitWidth="476.0" nodeOrientation="INHERIT" pickOnBounds="true">
+                                            <image>
+                                                <Image url="@FOTO/Civitas.jpg" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </StackPane>
+    </children>
+</Pane>

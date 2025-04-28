@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="838.0" prefWidth="1179.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uas.admin_galeriController">
+    <top>
+        <VBox alignment="CENTER" prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #2C3E50;">
+            <children>
+                <Label text="Admin Dashboard" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+    </top>
+    <left>
+        <VBox alignment="CENTER" prefHeight="600.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #34495E;">
+            <padding>
+            </padding>
+            <children>
+                <Button fx:id="btnEditDashboard" mnemonicParsing="false" onAction="#editDashboard" prefWidth="180.0" text="Edit Dashboard">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnD4TRPL" mnemonicParsing="false" onAction="#switchToD4TRPL" prefWidth="180.0" text="D4 TRPL">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnD3TI" mnemonicParsing="false" onAction="#switchToD3TI" prefWidth="180.0" text="D3 TI">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnD3TK" mnemonicParsing="false" onAction="#switchToD3TK" prefWidth="180.0" text="D3 TK">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnBerita" mnemonicParsing="false" onAction="#switchToBerita" prefWidth="180.0" text="Berita">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+            <Button fx:id="btngaleri1" mnemonicParsing="false" onAction="#switchTogaleri" prefWidth="180.0" text="Manajemen Karyawan">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+                <Button fx:id="btngaleri" mnemonicParsing="false" onAction="#switchToEmployees" prefWidth="180.0" text="Galeri">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#logout" prefWidth="180.0" text="Logout" textFill="RED">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <AnchorPane prefHeight="979.0" prefWidth="1029.0">
+            <children>
+                <Pane layoutY="7.0" prefHeight="405.0" prefWidth="315.0">
+                    <children>
+                        <ImageView fx:id="imageView1" fitHeight="175.0" fitWidth="371.0" layoutX="24.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button fx:id="openImageButton1" layoutX="45.0" layoutY="353.0" onAction="#openImage1" text="Open Image" />
+                        <Button fx:id="saveImageButton1" layoutX="185.0" layoutY="353.0" onAction="#saveImage1" text="Save Image" />
+                    </children>
+                </Pane>
+                <Pane layoutX="324.0" layoutY="6.0" prefHeight="404.0" prefWidth="307.0">
+                    <children>
+                        <ImageView fx:id="imageView2" fitHeight="175.0" fitWidth="371.0" layoutX="24.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button fx:id="openImageButton2" layoutX="32.0" layoutY="352.0" onAction="#openImage2" text="Open Image" />
+                        <Button fx:id="saveImageButton2" layoutX="162.0" layoutY="352.0" onAction="#saveImage2" text="Save Image" />
+                    </children>
+                </Pane>
+                <Pane layoutX="631.0" layoutY="5.0" prefHeight="395.0" prefWidth="344.0">
+                    <children>
+                        <ImageView fx:id="imageView3" fitHeight="175.0" fitWidth="371.0" layoutX="24.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button fx:id="openImageButton3" layoutX="54.0" layoutY="350.0" onAction="#openImage3" text="Open Image" />
+                        <Button fx:id="saveImageButton3" layoutX="180.0" layoutY="350.0" onAction="#saveImage3" text="Save Image" />
+                    </children>
+                </Pane>
+                <Pane layoutX="27.0" layoutY="410.0" prefHeight="378.0" prefWidth="330.0">
+                    <children>
+                        <ImageView fx:id="imageView4" fitHeight="175.0" fitWidth="371.0" layoutX="-23.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button fx:id="openImageButton4" layoutX="24.0" layoutY="322.0" onAction="#openImage4" text="Open Image" />
+                        <Button fx:id="saveImageButton4" layoutX="162.0" layoutY="322.0" onAction="#saveImage4" text="Save Image" />
+                    </children>
+                </Pane>
+                <Pane layoutX="315.0" layoutY="393.0" prefHeight="375.0" prefWidth="344.0">
+                    <children>
+                        <ImageView fx:id="imageView5" fitHeight="175.0" fitWidth="371.0" layoutX="24.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button fx:id="openImageButton5" layoutX="58.0" layoutY="337.0" onAction="#openImage5" text="Open Image" />
+                        <Button fx:id="saveImageButton5" layoutX="185.0" layoutY="337.0" onAction="#saveImage5" text="Save Image" />
+                    </children>
+                </Pane>
+                <Pane layoutX="631.0" layoutY="389.0" prefHeight="384.0" prefWidth="344.0">
+                    <children>
+                        <ImageView fx:id="imageView6" fitHeight="175.0" fitWidth="371.0" layoutX="24.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button fx:id="openImageButton6" layoutX="52.0" layoutY="339.0" onAction="#openImage6" text="Open Image" />
+                        <Button fx:id="saveImageButton6" layoutX="183.0" layoutY="339.0" onAction="#saveImage6" text="Save Image" />
+                    </children>
+                </Pane>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

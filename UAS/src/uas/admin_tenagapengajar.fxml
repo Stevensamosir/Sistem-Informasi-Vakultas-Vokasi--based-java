@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="814.0" prefWidth="1178.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uas.admin_tenagapengajarController">
+    <top>
+        <VBox alignment="CENTER" prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #2C3E50;">
+           <children>
+               <Label text="Admin Dashboard" textFill="WHITE">
+                   <font>
+                       <Font size="18.0" />
+                   </font>
+               </Label>
+           </children>
+        </VBox>
+    </top>
+    <left>
+        <VBox prefHeight="630.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #34495E;">
+           <children>
+               <Button fx:id="btnD4TRPL" mnemonicParsing="false" onAction="#switchToD4TRPL" prefWidth="200.0" text="D4 TRPL">
+                   <font>
+                       <Font size="14.0" />
+                   </font>
+               </Button>
+               <Button fx:id="btnD3TI" mnemonicParsing="false" onAction="#switchToD3TI" prefWidth="200.0" text="D3 TI">
+                   <font>
+                       <Font size="14.0" />
+                   </font>
+               </Button>
+               <Button fx:id="btnD3TK" mnemonicParsing="false" onAction="#switchToD3TK" prefWidth="200.0" text="D3 TK">
+                   <font>
+                       <Font size="14.0" />
+                   </font>
+               </Button>
+               <Button fx:id="btnBerita" mnemonicParsing="false" onAction="#switchToBerita" prefWidth="200.0" text="Berita">
+                   <font>
+                       <Font size="14.0" />
+                   </font>
+               </Button>
+                               <Button fx:id="btnGaleri" mnemonicParsing="false" onAction="#switchTogaleri" prefWidth="200.0" text="Galeri">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+               <Button fx:id="btnEmployees" mnemonicParsing="false" onAction="#switchToEmployees" prefWidth="200.0" text="Manajemen Karyawan">
+                   <font>
+                       <Font size="14.0" />
+                   </font>
+               </Button>
+               <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#logout" prefWidth="200.0" text="Logout" textFill="RED">
+                   <font>
+                       <Font size="14.0" />
+                   </font>
+               </Button>
+           </children>
+        </VBox>
+    </left>
+    <center>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="600.0">
+           <children>
+                 <VBox alignment="CENTER">
+                    <children>
+                        <Label text="Admin Dashboard">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                 </VBox>
+               <BorderPane prefHeight="400.0" prefWidth="600.0" />
+                 <TableView fx:id="employeeTable" layoutX="-12.0" prefHeight="658.0" prefWidth="792.0">
+                     <columns>
+                         <TableColumn fx:id="idColumn" prefWidth="31.0" text="ID" />
+                         <TableColumn fx:id="employeeIdColumn" prefWidth="103.0" text="Employee ID" />
+                         <TableColumn fx:id="firstNameColumn" prefWidth="106.0" text="First Name" />
+                         <TableColumn fx:id="lastNameColumn" prefWidth="111.0" text="Last Name" />
+                         <TableColumn fx:id="genderColumn" prefWidth="67.0" text="Gender" />
+                         <TableColumn fx:id="phoneNumberColumn" prefWidth="86.0" text="Phone Number" />
+                         <TableColumn fx:id="positionColumn" prefWidth="90.0" text="Position" />
+                         <TableColumn fx:id="dateColumn" prefWidth="71.0" text="Date" />
+                         <TableColumn fx:id="photoColumn" prefWidth="110.0" text="Photo" />
+                     </columns>
+                 </TableView>
+           </children>
+        </AnchorPane>
+    </center>
+   <right>
+           <VBox alignment="CENTER" prefHeight="673.0" prefWidth="197.0" spacing="10.0" BorderPane.alignment="CENTER">
+              <children>
+                  <Label text="Employee ID:" />
+                  <TextField fx:id="employeeIdField" />
+                  <Label text="First Name:" />
+                  <TextField fx:id="firstNameField" />
+                  <Label text="Last Name:" />
+                  <TextField fx:id="lastNameField" />
+                  <Label text="Gender:" />
+                  <ComboBox fx:id="genderComboBox" />
+                  <Label text="Phone Number:" />
+                  <TextField fx:id="phoneNumberField" />
+                  <Label text="Position:" />
+                  <TextField fx:id="positionField" />
+                  <Label text="Date:" />
+                  <TextField fx:id="dateField" />
+                  <Label text="Photo:" />
+                  <HBox spacing="10.0">
+                     <children>
+                         <TextField fx:id="photoField" />
+                         <Button onAction="#handleChoosePhoto" prefHeight="31.0" prefWidth="201.0" text="Choose Photo" />
+                     </children>
+                  </HBox>
+              </children>
+           </VBox>
+   </right>
+   <bottom>
+           <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
+              <children>
+                  <Button fx:id="addButton" onAction="#handleAdd" text="Add" />
+                  <Button fx:id="editButton" onAction="#handleEdit" text="Edit" />
+                  <Button fx:id="deleteButton" onAction="#handleDelete" text="Delete" />
+              </children>
+           </HBox>
+   </bottom>
+</BorderPane>

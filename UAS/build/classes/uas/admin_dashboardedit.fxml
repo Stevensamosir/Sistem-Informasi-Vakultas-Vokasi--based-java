@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="695.0" prefWidth="854.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uas.admin_dashboardeditController">
+    <top>
+        <VBox alignment="CENTER" prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #2C3E50;">
+            <children>
+                <Label text="Admin Dashboard" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+    </top>
+    <left>
+        <VBox alignment="CENTER" prefHeight="600.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #34495E;">
+            <padding>
+            </padding>
+            <children>
+                <Button fx:id="btnEditDashboard" mnemonicParsing="false" onAction="#editDashboard" prefWidth="180.0" text="Edit Dashboard">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnD4TRPL" mnemonicParsing="false" onAction="#switchToD4TRPL" prefWidth="180.0" text="D4 TRPL">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnD3TI" mnemonicParsing="false" onAction="#switchToD3TI" prefWidth="180.0" text="D3 TI">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnD3TK" mnemonicParsing="false" onAction="#switchToD3TK" prefWidth="180.0" text="D3 TK">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnBerita" mnemonicParsing="false" onAction="#switchToBerita" prefWidth="180.0" text="Berita">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                                <Button fx:id="btnGaleri" mnemonicParsing="false" onAction="#switchTogaleri" prefHeight="30.0" prefWidth="183.0" text="Galeri">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btngaleri" mnemonicParsing="false" onAction="#switchTogaleri1" prefWidth="180.0" text="Manajemen Karyawan">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#logout" prefWidth="180.0" text="Logout" textFill="RED">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <AnchorPane prefHeight="600.0" prefWidth="600.0">
+            <children>
+                <Pane fx:id="dashboardPane" layoutX="2.0" layoutY="-2.0" prefHeight="556.0" prefWidth="598.0">
+                    <children>
+                        <TextArea fx:id="descriptionTextArea" layoutX="270.0" layoutY="19.0" prefHeight="423.0" prefWidth="303.0" />
+                        <Button fx:id="saveButton" layoutX="505.0" layoutY="450.0" onAction="#saveDashboardContent" text="Save" />
+                        <ImageView fx:id="imageView" fitHeight="175.0" fitWidth="371.0" layoutX="24.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button fx:id="openImageButton" layoutX="24.0" layoutY="450.0" onAction="#openImage" text="Open Image" />
+                        <Button fx:id="saveImageButton" layoutX="130.0" layoutY="450.0" onAction="#saveImage" text="Save Image" />
+                    </children>
+                </Pane>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

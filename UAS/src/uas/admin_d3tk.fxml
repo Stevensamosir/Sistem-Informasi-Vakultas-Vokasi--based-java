@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="856.0" prefWidth="834.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uas.admin_d3tkController">
+    <top>
+        <VBox alignment="CENTER" prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #2C3E50;">
+            <children>
+                <Label text="Admin Dashboard" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+    </top>
+    <left>
+        <VBox alignment="CENTER" prefHeight="600.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: #34495E;">
+            <children>
+                <Button fx:id="btnEditDashboard" mnemonicParsing="false" onAction="#editDashboard" prefWidth="200.0" text="Edit Dashboard">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnD4TRPL" mnemonicParsing="false" onAction="#switchToD4TRPL" prefWidth="200.0" text="D4 TRPL">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnD3TI" mnemonicParsing="false" onAction="#switchToD3TI" prefWidth="200.0" text="D3 TI">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnD3TK" mnemonicParsing="false" onAction="#switchToD3TK" prefWidth="200.0" text="D3 TK">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnBerita" mnemonicParsing="false" onAction="#switchToBerita" prefWidth="200.0" text="Berita">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                                <Button fx:id="btnGaleri" mnemonicParsing="false" onAction="#switchTogaleri" prefWidth="200.0" text="Galeri">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnEmployees" mnemonicParsing="false" onAction="#switchToEmployees" prefWidth="200.0" text="Manajemen Karyawan">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#logout" prefWidth="200.0" text="Logout" textFill="RED">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="848.0" prefWidth="805.0">
+            <children>
+                <VBox alignment="CENTER" layoutX="50.0" layoutY="20.0" prefWidth="500.0" spacing="10.0">
+                   <children>
+                       <Label text="Nama:" />
+                       <TextField fx:id="namaField" promptText="Masukkan nama" />
+                       <Label text="Judul:" />
+                       <TextField fx:id="judulField" promptText="Masukkan judul" />
+                       <Label text="Sejarah:" />
+                       <TextArea fx:id="sejarahTextArea" prefHeight="100.0" promptText="Masukkan sejarah" />
+                       <Label text="Visi:" />
+                       <TextArea fx:id="visiTextArea" prefHeight="100.0" promptText="Masukkan visi" />
+                       <Label text="Misi:" />
+                       <TextArea fx:id="misiTextArea" prefHeight="100.0" promptText="Masukkan misi" />
+                       <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="150.0" />
+                       <HBox alignment="CENTER" spacing="10.0">
+                          <children>
+                              <Button fx:id="openImageButton" onAction="#openImage" text="Open Image" />
+                              <Button fx:id="saveDataButton" onAction="#saveData" text="Save Data" />
+                          </children>
+                       </HBox>
+                   </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

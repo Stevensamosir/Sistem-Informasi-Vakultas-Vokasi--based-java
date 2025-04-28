@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="1005.0" prefWidth="1238.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uas.user_D4trplController">
+   <children>
+      <AnchorPane prefHeight="50.0" prefWidth="1237.0" style="-fx-background-color: #2C3E50;">
+         <children>
+            <Label layoutX="14.0" layoutY="12.0" text="D4 Teknologi Rekayasa Perangkat Lunak" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="50.0" prefHeight="955.0" prefWidth="216.0" style="-fx-background-color: #34495E;">
+         <children>
+            <!-- Buttons -->
+
+            <Button fx:id="btn_dashboard" layoutX="18.0" layoutY="28.0" mnemonicParsing="false" onAction="#switchToDashboard" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #2980B9;" text="Edit beranda" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_d4trpl" layoutX="18.0" layoutY="84.0" mnemonicParsing="false" onAction="#switchToD4TRPL" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #2980B9;" text="D4 Teknologi Rekayasa Perangkat Lunak" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_d3ti" layoutX="18.0" layoutY="140.0" mnemonicParsing="false" onAction="#switchToD3TI" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #2980B9;" text="D3 Teknologi Informasi" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_d3tk" layoutX="18.0" layoutY="196.0" mnemonicParsing="false" onAction="#switchToD3TK" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #2980B9;" text="D3 Teknologi Komputer" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_news" layoutX="18.0" layoutY="252.0" mnemonicParsing="false" onAction="#switchToNews" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #2980B9;" text="Berita" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_news1" layoutX="18.0" layoutY="309.0" mnemonicParsing="false" onAction="#switchToNews1" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #2980B9;" text="Galeri" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_teachers" layoutX="18.0" layoutY="369.0" mnemonicParsing="false" onAction="#switchToTeachers" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #2980B9;" text="Tenaga Pengajar" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_profile" layoutX="18.0" layoutY="428.0" mnemonicParsing="false" onAction="#switchToProfile" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #E74C3C;" text="Kembali" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <!-- Buttons -->
+         </children>
+      </AnchorPane>
+      <ScrollPane layoutX="226.0" layoutY="50.0" prefHeight="888.0" prefWidth="1012.0" style="-fx-background-color: #F5F5F5;">
+         <content>
+            <VBox alignment="CENTER" prefHeight="888.0" prefWidth="1010.0" spacing="20.0">
+               <children>
+                  <ImageView fx:id="imageView" fitHeight="225.0" fitWidth="316.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="namaLabel" />
+                  <Label fx:id="judulLabel" />
+                  <Label text="Visi:" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="visiLabel" prefHeight="21.0" prefWidth="489.0" wrapText="true" />
+                  <Label text="Misi:" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="misiLabel" prefHeight="41.0" prefWidth="559.0" wrapText="true" />
+                  <Label text="Sejarah:">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="sejarahTextArea" editable="false" prefHeight="358.0" prefWidth="998.0" wrapText="true" />
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
